@@ -39,8 +39,8 @@
             <div class="masthead-content">
                 <div class="container px-5">
                     <h1 class="masthead-heading mb-0">The Cat's Meow</h1>
-                    <h2 class="masthead-subheading mb-0">The purrrfect name for your feline</h2>
-                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
+                    <h2 class="masthead-subheading mb-0">Find the purrrfect name for your feline</h2>
+                    <!-- <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a> -->
                 </div>
             </div>
             <div class="bg-circle-1 bg-circle"></div>
@@ -60,10 +60,11 @@
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
                             <h2 class="display-4">Find the purrfect name for your cat...</h2>
-                            <p class="api-output">Finding the perfect name for your furry friend has never been easier. Our algorithm takes into account your cat's unique personality, breed, and physical attributes to generate a list of customized and personalized names just for them. With CatNameGenius, you'll never have to struggle with naming your cat again. Say goodbye to generic names and hello to a name that truly reflects your cat's one-of-a-kind spirit. Get started today and give your feline companion the purrfect name they deserve!</p>
-                            <div id="output-container">                            <a id="loadingButton" class=" btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Loading Button</a></div>
-                            <a id="fetch-fortune-btn" class=" btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Click Here For Name!</a>
-
+                            <p >Finding the perfect name for your furry friend has never been easier. Our algorithm takes into account your cat's unique personality, breed, and physical attributes to generate a list of customized and personalized names just for them. With CatNameGenius, you'll never have to struggle with naming your cat again. Say goodbye to generic names and hello to a name that truly reflects your cat's one-of-a-kind spirit. Get started today and give your feline companion the purrfect name they deserve!</p>
+                            <a id="fetch-name-btn" class=" btn btn-primary btn-xl rounded-pill mt-5" >Click Here to Find a Purrrfect Name!</a>
+                            <div class="api-output" id="output-container">
+                            </div>
+                            
                 
                         </div>
                     </div>
@@ -82,6 +83,13 @@
                             <h2 class="display-4">What does your cat's name mean?</h2>
                             <p>Introducing CatNameExplorer - the ultimate software for cat lovers who want to know the true meaning behind their furry friend's name. Our powerful database contains thousands of cat names and their meanings, including traditional, trendy, and unique options. Simply input your cat's name, and within seconds, you'll receive a comprehensive report on its origins, history, and symbolism. Discover the hidden meanings behind your cat's name and gain a deeper appreciation for their unique identity. With CatNameExplorer, you'll gain a new level of understanding and connection with your feline companion. Try it today and unlock the secrets of your cat's name!</p>
                             <!-- Photo by <a href="https://unsplash.com/@alxndr_london?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexander London</a> on <a href="https://unsplash.com/images/animals/cat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+                            <div class="input-group-lg mt-3 mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Name Here:</label>
+                                <input type="text" class="form-control" id="explorecatName" placeholder="e.g. Mittenkins Romney">
+                            </div>
+                            <a id="explore-btn" class=" btn btn-primary btn-xl rounded-pill mt-5" >Click Here to Find out more about Your Cat's Name!</a>
+                            <div class="explore-api-output" id="explore-output-container">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -97,8 +105,19 @@
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
                             <h2 class="display-4">The previous nine lives</h2>
-                            <p>Introducing CatPastLives - the ultimate software for cat lovers who want to discover the mysterious past lives of their beloved feline companions. Our innovative technology uses advanced algorithms to tap into the spiritual realm, revealing your cat's previous incarnations and the lessons they learned in each life. Simply input your cat's date of birth, and within moments, you'll receive a detailed report on their past lives, including their personalities, experiences, and even their relationships with their past owners. Unleash the mysteries of your cat's soul and gain a deeper understanding of their unique spirit. With CatPastLives, you'll discover a new level of connection with your feline companion. Try it today and uncover the secrets of your cat's past lives!</p>
+                            <p>Introducing CatPastLives - the ultimate software for cat lovers who want to discover the mysterious past lives of their beloved feline companions. Our innovative technology uses advanced algorithms to tap into the spiritual realm, revealing your cat's previous incarnations and the lessons they learned in each life. Simply input your cat's name and date of birth, and within moments, you'll receive a detailed report on their past lives, including their personalities, experiences, and even their relationships with their past owners. Unleash the mysteries of your cat's soul and gain a deeper understanding of their unique spirit. With CatPastLives, you'll discover a new level of connection with your feline companion. Try it today and uncover the secrets of your cat's past lives!</p>
                             <!-- Photo by <a href="https://unsplash.com/@bogdanf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bogdan Farca</a> on <a href="https://unsplash.com/images/animals/cat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+                            <div class="input-group-lg mt-3 mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Name Here:</label>
+                                <input type="text" class="form-control" id="historycatName" placeholder="e.g. Treacle">
+                            </div>
+                            <div class="input-group-lg mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Date of Birth Here (add at least the year of birth):</label>
+                            <input type="text" class="form-control" id="catName" placeholder="e.g. 20 May 2021">
+                            </div>
+                            <a id="history-btn" class=" btn btn-primary btn-xl rounded-pill mt-5" >Click to Find Out About Your Cat's Past Lives!</a>
+                            <div class="history-api-output" id="history-output-container">
+                            </div>
                         </div>
                     </div>
                 </div>

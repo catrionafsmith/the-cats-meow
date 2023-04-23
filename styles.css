@@ -11,8 +11,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-
-
+ .api-output {
+  color: #ed0878;
+ }
+/* 
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10921,8 +10923,12 @@ header.masthead .bg-circle-4 {
   header.masthead .masthead-content .masthead-subheading {
     font-size: 4rem;
   }
-}
+} */
 
 .rounded {
   border-radius: 50%;
+}
+
+.btn .btn-primary .btn-xl .rounded-pill .mt-5 #loadingButton {
+  display: block;
 }
