@@ -63,25 +63,29 @@
                             <p >Finding the perfect name for your furry friend has never been easier. Our algorithm takes into account your cat's unique personality, breed, and physical attributes to generate a list of customized and personalized names just for them.</p>
                             
                             <div class="input-group mt-3 mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Breed Here:</label>
+                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Breed Here: </label>
                                 <input type="text" class="form-control" id="nameBreed" placeholder="e.g. Domestic shorthair">
                             </div>
                             <div class="input-group mt-3 mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Enter a short description here:</label>
+                                <label for="exampleFormControlInput1" class="form-label">Enter a short description here: </label>
                                 <input type="text" class="form-control" id="nameDescription" placeholder="e.g. chill, loving, calm ">
                             </div>
                             <div class="input-group mt-3 mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Colour Here:</label>
+                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Colour Here: </label>
                                 <input type="text" class="form-control" id="nameColour" placeholder="e.g. black">
                             </div>
                             <div class="input-group mt-3 mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Enter Cat's Gender (if known):</label>
+                                <label for="exampleFormControlInput1" class="form-label">Enter Cat's Gender (if known): </label>
                                 <input type="text" class="form-control" id="nameGender" placeholder="e.g. Male/Female">
                             </div>
                             <a id="fetch-name-btn" class=" btn btn-primary btn-xl rounded-pill mt-5" >Click Here to Find a Purrrfect Name!</a>
                             <div class="mt-5 container api-output" id="output-container">
                             </div>
-                            
+                            <!-- Loading button -->
+                            <button id="loadingButton" class="btn btn-primary mb-5" type="button" disabled>
+                                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                Loading...(up to 20 seconds)
+                            </button>
                 
                         </div>
                         
@@ -103,24 +107,29 @@
                             <p>Cats need homes and you need compelling descriptions - so let our service do the work! Come up with creative and eye-catching descriptions with our easy-to-use tools to help cats get the homes they deserve. Just add details below!</p>
                             <!-- Photo by <a href="https://unsplash.com/@alxndr_london?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexander London</a> on <a href="https://unsplash.com/images/animals/cat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
                             <div class="input-group mt-3 mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Name Here:</label>
+                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Name Here: </label>
                                 <input type="text" class="form-control" id="explorecatName" placeholder="e.g. Mittenkins Romney">
                             </div>
                             <div class="input-group mt-3 mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Breed Here:</label>
+                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Breed Here: </label>
                                 <input type="text" class="form-control" id="exploreBreed" placeholder="e.g. Domestic shorthair">
                             </div>
                             <div class="input-group mt-3 mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Enter a short description here:</label>
+                                <label for="exampleFormControlInput1" class="form-label">Enter a short description here: </label>
                                 <input type="text" class="form-control" id="exploreDescription" placeholder="e.g. chill, loving, calm ">
                             </div>
                             <div class="input-group mt-3 mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Age Here:</label>
+                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Age Here: </label>
                                 <input type="text" class="form-control" id="exploreAge" placeholder="e.g. 2 years">
                             </div>
                             <a id="explore-btn" class=" btn btn-primary btn-xl rounded-pill mt-5" >Click Here to Create a Compelling story!</a>
                             <div class="mt-5 container explore-api-output" id="explore-output-container">
                             </div>
+                            <!-- Loading button -->
+                            <button id="loadingButton" class="btn btn-primary mb-5" type="button" disabled>
+                                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                Loading...(up to 20 seconds)
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -139,16 +148,21 @@
                             <p>Introducing CatPastLives - the ultimate software for cat lovers who want to discover the mysterious past lives of their beloved feline companions. Our innovative technology uses advanced algorithms to tap into the spiritual realm, revealing your cat's previous incarnations and the lessons they learned in each life. Simply input your cat's name and date of birth, and within moments, you'll receive a detailed report on their past lives, including their personalities, experiences, and even their relationships with their past owners. Unleash the mysteries of your cat's soul and gain a deeper understanding of their unique spirit. With CatPastLives, you'll discover a new level of connection with your feline companion. Try it today and uncover the secrets of your cat's past lives!</p>
                             <!-- Photo by <a href="https://unsplash.com/@bogdanf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bogdan Farca</a> on <a href="https://unsplash.com/images/animals/cat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
                             <div class="input-group mt-3 mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Name Here:</label>
+                                <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Name Here: </label>
                                 <input type="text" class="form-control" id="historycatName" placeholder="e.g. Treacle">
                             </div>
                             <div class="input-group mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Date of Birth Here (add at least the year of birth):</label>
+                            <label for="exampleFormControlInput1" class="form-label">Enter Your Cat's Date of Birth Here (add at least the year of birth): </label>
                             <input type="text" class="form-control" id="catName" placeholder="e.g. 20 May 2021">
                             </div>
                             <a id="history-btn" class=" btn btn-primary btn-xl rounded-pill mt-5" >Click to Find Out About Your Cat's Past Lives!</a>
                             <div class="mt-5 container history-api-output" id="history-output-container">
                             </div>
+                            <!-- Loading button -->
+                            <button id="loadingButton" class="btn btn-primary mb-5" type="button" disabled>
+                                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                Loading...(up to 20 seconds)
+                            </button>
                         </div>
                     </div>
                 </div>
