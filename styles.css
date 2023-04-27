@@ -15,6 +15,11 @@
   align-items: center;
 }
 
+#loadingHistoryButton {
+  display: none;
+  align-items: center;
+}
+
  .api-output, .explore-api-output, .history-api-output {
   color: #ed0878;
  }
