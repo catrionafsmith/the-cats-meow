@@ -15,9 +15,18 @@ if (nameButton) {
     nameButton.addEventListener('click', async () => {
         // loadingButton.style.display = 'block'
         // loadingButton.scrollIntoView({ behavior: 'smooth' })
+        const nameBreed = document.getElementById("nameBreed").value
+        const nameDescription = document.getElementById("nameDescription").value
+        const nameColour = document.getElementById("nameColour").value
+        const nameGender = document.getElementById("nameGender").value
 
-        const prompt = `You are an expert marketer in the area of pet names, You run CatNameGenius - the ultimate software for cat-lovers! It means that finding the perfect name for a furry friend has never been easier. The algorithm takes into account the cat's unique personality, breed, and physical attributes to generate a list of customized and personalized names just for them. With CatNameGenius, you'll never have to struggle with naming your cat again. Say goodbye to generic names and hello to a name that truly reflects your cat's one-of-a-kind spirit. Get started today to give a feline companion the purrfect name they deserve! Now suggest 5 cat names and add a sentence to share why they would be great names:`
-
+        const prompt = `You work at CatNameGenius. Here is the About Us section from their website: 'Introducing CatNameGenius - the ultimate software for cat-lovers! Finding the perfect name for your furry friend has never been easier. Our algorithm takes into account your cat's unique personality, breed, and physical attributes to generate a list of customized and personalized names just for them. With CatNameGenius, you'll never have to struggle with naming your cat again. Say goodbye to generic names and hello to a name that truly reflects your cat's one-of-a-kind spirit. Get started today and give your feline companion the purrfect name they deserve!' You are an expert in creating creative and attractive cat names at animal shelters so that animal-lovers will have a connection with them and want to adopt them. Come up with five surprising and unusual names, plus a little bit of explanation about each name. 
+        The cat which you are naming is: 
+       Breed: ${nameBreed}
+       Description: ${nameDescription}
+       Colour: ${nameColour} 
+       Gender: ${nameGender}
+       looking for a loving home`
     
         const keyresp = await fetch('/.netlify/functions/get-token')
         .then(response => response.json()
@@ -56,7 +65,33 @@ if (exploreButton) {
         // loadingButton.style.display = 'block'
         // loadingButton.scrollIntoView({ behavior: 'smooth' })
         const explorecatName = document.getElementById("explorecatName").value
-        const prompt = `You are an expert pet content creator and the inventor of CatNameExplorer - the ultimate software for cat lovers who want to know the true meaning behind their furry friend's name. Your powerful database contains thousands of cat names and their meanings, including traditional, trendy, and unique options. A user simply inputs their cat's name, and within seconds,they'll receive a comprehensive report on its origins, history, and symbolism. The user will discover the hidden meanings behind their cat's name and gain a deeper appreciation for their unique identity. When users use CatNameExplorer, they'll gain a new level of understanding and connection with their feline companion. The user can unlock the secrets of your cat's name! Now write a CatNameExplorer report on the origins, history, and symbolism of the cat name ${explorecatName}`
+        const exploreBreed = document.getElementById("exploreBreed").value
+        const exploreDescription = document.getElementById("exploreDescription").value
+        const exploreAge = document.getElementById("exploreAge").value
+        const prompt = `You work at a cat shelter, and your job is to write compelling and emotionally-affecting copy about each cat, so that animal-lovers will have a connection with them and want to adopt them. 
+
+        Here are some of the stories that you have written about pets to be adopted:
+       
+       Story 1: "Blue is an incredibly affectionate, warm and confident young man!
+       He is a big love bug who will begin purring the moment you pick him up! Cuddles with Blue are the best therapy.
+       Blue is equally as happy to play. He would fit in perfectly in any home!
+       Blue is a curious, happy and confident cat that would suit a house with a loving family!"
+       
+       Story 2: "Dougal might come off as a bit shy when you first meet him but don’t be fooled, he is incredibly quick to warm up and dote on you!
+       Dougal has a very calm, charismatic and playful presence. He loves to be picked up and cuddled which makes him a great companion pet.
+       If his personality isn’t enough, Dougal also has a gorgeous multicoloured coat with big adoring eyes that match his calm, warm and loving presence!"
+       
+       Story 3: "Once you go Jack you’ll never go back!
+       This handsome hunk takes a little bit of time to warm up to people, but once he does he’s an affectionate little angel. The way to his heart is through his stomach and he’ll become quick friends with anyone who offers him a delicious treat. He is more of a ladies man so would need to meet everyone in the family.
+       His sweet meow and chubby cheeks are sure to melt the heart of any cat lover. Come in and see if you can resist his charms!"
+       
+       You are a marketing and content-creation expert who writes descriptions of animals who are currently in animal shelters so that animal-lovers will have a connection with them and want to adopt them. 
+       
+       Come up with a heart-warming and compelling story about the animal below:
+       Name: ${explorecatName}
+       Breed: ${exploreBreed}
+       Description: ${exploreDescription}
+       Age: ${exploreAge} `
 
     
         const keyresp = await fetch('/.netlify/functions/get-token')
