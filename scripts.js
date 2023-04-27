@@ -3,6 +3,8 @@ const exploreButton = document.getElementById('explore-btn')
 const historyButton = document.getElementById('history-btn')
 const output = document.querySelector('.api-output')
 const loadingButton = document.getElementById("loadingButton")
+const loadingExploreButton = document.getElementById("loadingExploreButton")
+const loadingHistoryButton = document.getElementById("loadingHistoryButton")
 const outputContainer = document.getElementById("output-container")
 const emailButton = document.getElementById('fetch-email-btn')
 const exploreoutputContainer = document.getElementById("explore-output-container")
@@ -63,7 +65,7 @@ if (nameButton) {
 // Function for Explore section
 if (exploreButton) {
     exploreButton.addEventListener('click', async () => {
-        loadingButton.style.display = 'block'
+        loadingExploreButton.style.display = 'block'
         // loadingButton.scrollIntoView({ behavior: 'smooth' })
         const explorecatName = document.getElementById("explorecatName").value
         const exploreBreed = document.getElementById("exploreBreed").value
@@ -117,7 +119,7 @@ if (exploreButton) {
                 }
                 
                 exploreoutputContainer.style.display = 'block';
-                loadingButton.style.display = 'none';
+                loadingExploreButton.style.display = 'none';
                 // outputContainer.scrollIntoView({ behavior: 'smooth' })
             });
     
@@ -130,7 +132,7 @@ if (exploreButton) {
 // Function for History section
 if (historyButton) {
     historyButton.addEventListener('click', async () => {
-        loadingButton.style.display = 'block'
+        loadingHistoryButton.style.display = 'block'
         // loadingButton.scrollIntoView({ behavior: 'smooth' })
         const historycatName = document.getElementById("historycatName").value
         const prompt = `You run CatPastLives - the ultimate software for cat lovers who want to discover the mysterious past lives of their beloved feline companions. Your innovative technology uses advanced algorithms to tap into the spiritual realm, revealing your cat's previous incarnations and the lessons they learned in each life. A user simply needs to input their cat's name, and within moments, they'll receive a detailed report on their past lives, including their personalities, experiences, and even their relationships with their past owners. Users will unleash the mysteries of their cat's soul and gain a deeper understanding of their unique spirit. With CatPastLives, users can discover a new level of connection with their feline companion. Now write a CatPastLife report for a cat named ${historycatName}`
@@ -158,7 +160,7 @@ if (historyButton) {
                 }
                 
                 historyoutputContainer.style.display = 'block';
-                loadingButton.style.display = 'none';
+                loadingHistoryButton.style.display = 'none';
                 // outputContainer.scrollIntoView({ behavior: 'smooth' })
             });
     
