@@ -59,6 +59,8 @@
                     </div>
                     <div class="col-lg-8 order-lg-1">
                         <div class="p-5">
+                            <img src="assets/img/bunny.gif" alt="Bouncing bunny" id="bunny">
+                        
                             <h2 class="display-4">Find the purrfect name for your cat...</h2>
                             <p >Finding the perfect name for your furry friend has never been easier. Our algorithm takes into account your cat's unique personality, breed, and physical attributes to generate a list of customized and personalized names just for them.</p>
                             
@@ -103,6 +105,7 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="p-5">
+                            
                             <h2 class="display-4">Quickly generate a compelling story for your foster cats</h2>
                             <p>Cats need homes and you need compelling descriptions - so let our service do the work! Come up with creative and eye-catching descriptions with our easy-to-use tools to help cats get the homes they deserve. Just add details below!</p>
                             <!-- Photo by <a href="https://unsplash.com/@alxndr_london?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexander London</a> on <a href="https://unsplash.com/images/animals/cat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
@@ -168,6 +171,18 @@
                 </div>
             </div>
         </section>
+        <!-- The Big Paws... -->
+        <h1>The Big Paws...</h1>
+        <h2>Click to find your cat's best feature!</h2>
+        <a id="paws-btn" class=" btn btn-primary btn-xl rounded-pill mt-5" >Click to Find Out About Your Cat's Best Feature!</a>
+        <div class="mt-5 container paws-api-output" id="paws-output-container">
+        </div>
+        <!-- Loading button -->
+        <button id="loadingPawsButton" class="btn btn-primary mb-5" type="button" disabled>
+            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+            Loading...(up to 20 seconds)
+        </button>
+
         <!-- Footer-->
         <footer class="py-5 bg-black">
             <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; The Cat's Meow 2023</p></div>

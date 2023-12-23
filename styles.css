@@ -10,7 +10,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-#loadingButton, #loadingExploreButton, #loadingHistoryButton {
+#loadingButton, #loadingExploreButton, #loadingHistoryButton, #loadingPawsButton {
   display: none;
   align-items: center;
 }
@@ -23,6 +23,22 @@
  .api-output, .explore-api-output, .history-api-output {
   color: #ed0878;
  }
+
+ #bunny {
+  position: absolute;
+  bottom: 0;
+  /* animation: bounce 1s infinite alternate; */
+}
+
+/* @keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+} */
+
 /* 
 :root {
   --bs-blue: #0d6efd;

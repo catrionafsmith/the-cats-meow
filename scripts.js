@@ -1,16 +1,20 @@
 const nameButton = document.getElementById('fetch-name-btn')
 const exploreButton = document.getElementById('explore-btn')
 const historyButton = document.getElementById('history-btn')
+const pawsButton = document.getElementById('paws-btn')
 const output = document.querySelector('.api-output')
 const loadingButton = document.getElementById("loadingButton")
 const loadingExploreButton = document.getElementById("loadingExploreButton")
 const loadingHistoryButton = document.getElementById("loadingHistoryButton")
+const loadingPawsButton = document.getElementById("loadingPawsButton")
 const outputContainer = document.getElementById("output-container")
 const emailButton = document.getElementById('fetch-email-btn')
 const exploreoutputContainer = document.getElementById("explore-output-container")
 const exploreoutput = document.querySelector('.explore-api-output')
 const historyoutputContainer = document.getElementById("history-output-container")
 const historyoutput = document.querySelector('.history-api-output')
+const pawsoutputContainer = document.getElementById("paws-output-container")
+const pawsoutput = document.querySelector('.paws-api-output')
 
 // Function for Name section
 if (nameButton) {
@@ -38,7 +42,7 @@ if (nameButton) {
         const response = await fetch(
                 `https://api.openai.com/v1/chat/completions`,
                 {
-                    body: JSON.stringify({"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": prompt}], "temperature": 0.99, "max_tokens": 400}),
+                    body: JSON.stringify({"model": "gpt-3.5-turbo-instruct", "messages": [{"role": "system", "content": prompt}], "temperature": 0.99, "max_tokens": 400}),
                     method: "POST",
                     headers: {
                         "content-type": "application/json",
@@ -104,7 +108,7 @@ if (exploreButton) {
         const response = await fetch(
                 `https://api.openai.com/v1/chat/completions`,
                 {
-                    body: JSON.stringify({"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": prompt}], "temperature": 0.99, "max_tokens": 400}),
+                    body: JSON.stringify({"model": "gpt-3.5-turbo-instruct", "messages": [{"role": "system", "content": prompt}], "temperature": 0.99, "max_tokens": 400}),
                     method: "POST",
                     headers: {
                         "content-type": "application/json",
@@ -145,7 +149,7 @@ if (historyButton) {
         const response = await fetch(
                 `https://api.openai.com/v1/chat/completions`,
                 {
-                    body: JSON.stringify({"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": prompt}], "temperature": 0.99, "max_tokens": 400}),
+                    body: JSON.stringify({"model": "gpt-3.5-turbo-instruct", "messages": [{"role": "system", "content": prompt}], "temperature": 0.99, "max_tokens": 400}),
                     method: "POST",
                     headers: {
                         "content-type": "application/json",
@@ -168,3 +172,84 @@ if (historyButton) {
     
         });
     }
+
+    // Function for the Big Paws...
+if (pawsButton) {
+    pawsButton.addEventListener('click', async () => {
+        loadingPawsButton.style.display = 'block'
+        // loadingButton.scrollIntoView({ behavior: 'smooth' })
+        // const historycatName = document.getElementById("historycatName").value
+        const prompt = `You run CatPastLives - the ultimate software for cat lovers who want to discover the amazing body parts past lives of their beloved feline companions. Your innovative technology uses advanced algorithms to figure out the best body parts of each cat. Return a sparkling report on the best body part of a cat named BillyBob`
+
+    
+        const keyresp = await fetch('/.netlify/functions/get-token')
+        .then(response => response.json()
+        )
+    // app.post('/api/openai', async (req, res) => {
+    //     const { message } = req.body;
+        
+    //     // store user message in global message state
+    //     const userMessage = { role: "user", content: message };
+    
+    //     // add to global messages list
+    //     global.messages.push(userMessage);
+    
+        // send a request to the OpenAI API with the user's message
+        // using the node-fetch library
+        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                // notice how we're using process.env here
+                // this is using the environment variable from the .env file
+                // "content-type": "application/json",
+                // "Authorization" :`Bearer ` + keyresp['message'],
+                'Authorization': `Bearer ` + keyresp['message'],
+                'Content-Type': 'application/json',
+            },
+            // construct the request payload
+            // using the entire chat history (global.messages)
+            // sending an external request to the OpenAI API
+            body: JSON.stringify({
+                model: 'gpt-3.5-turbo-instruct',
+                messages: [{"role": "system", "content": prompt}],
+                // the maximum number of tokens/words the bot should return
+                // in response to a given prompt
+                max_tokens: 400,
+            }),
+        });
+        
+        if (!response.ok) {
+            // if the request was not successful, parse the error
+            const error = await response.json();
+    
+            // log the error for debugging purposes
+            console.error('OpenAI API Error:', error);
+    
+            // return an error response to the client
+            // return pawsoutput.textContent.json({ status: 'error', data: null });
+        }
+        
+        // parse the response from OpenAI as json
+        const data = await response.json();
+    
+        // get the bot's answer from the OpenAI API response
+        // const botAnswer = data?.choices?.[0]?.message?.content
+        pawsoutput.textContent = data?.choices?.[0]?.message?.content
+        pawsoutputContainer.style.display = 'block';
+        loadingPawsButton.style.display = 'none';
+        // pastoutput.textContent = json.choices[0].message.content.trim()
+    
+        // create the bot message object
+        // const botMessage = { role: "assistant", content: botAnswer };
+    
+        // // store bot message in global message state
+        // global.messages.push(botMessage);
+    
+        // // send the bot's answer back to the client
+        // return res.json({ status: 'success', data: botAnswer });
+    })}
+
+    window.addEventListener('load', function() {
+        var bunny = document.getElementById('bunny');
+        bunny.classList.add('bounce');
+      });
